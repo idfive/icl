@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src/ts",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true
+  },
+  "include": [
+    "./src"
+  ]
+}
