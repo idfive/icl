@@ -5,7 +5,6 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   entry: [
     "./src/ts/index.ts",
-    "./src/scss/index.scss",
   ],
   resolve: {
     extensions: [
@@ -13,8 +12,14 @@ module.exports = {
     ],
   },
   output: {
-    filename: "index.js",
     path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+    library: {
+      type: "module",
+    },
+  },
+  experiments: {
+    outputModule: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
